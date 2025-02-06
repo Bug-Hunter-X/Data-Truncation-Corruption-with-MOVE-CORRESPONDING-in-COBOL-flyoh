@@ -1,0 +1,3 @@
+MOVE CORRESPONDING WS-RECORD TO DB-RECORD.
+
+This seemingly innocuous statement can lead to unexpected behavior if the structures WS-RECORD and DB-RECORD don't have identical data types and lengths in corresponding fields.  For instance, if WS-RECORD has a field defined as PIC 9(5) and DB-RECORD has the same field defined as PIC 9(6), a MOVE CORRESPONDING would truncate the data.  Similarly, if there's a mismatch between numeric and alphanumeric fields, data corruption can occur.  The compiler might not always issue warnings, making this error very difficult to spot.
