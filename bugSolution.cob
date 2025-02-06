@@ -1,0 +1,10 @@
+PROCEDURE DIVISION.
+
+    MOVE WS-RECORD-FIELD1 TO DB-RECORD-FIELD1.
+    MOVE WS-RECORD-FIELD2 TO DB-RECORD-FIELD2.
+    MOVE WS-RECORD-FIELD3 TO DB-RECORD-FIELD3.
+    ...
+
+    * Explicitly move each field to ensure correct data handling.
+
+END PROGRAM.
